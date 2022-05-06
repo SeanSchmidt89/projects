@@ -10,9 +10,7 @@
     {% block content %}
     <form action="" method="POST">
         {% csrf_token %}
-        {{form.title}}
-        {{form.priority}}
-        {{form.cool}}
+        {{form.as_p}}
         <button type="submit">Add item</button>
     </form>
     

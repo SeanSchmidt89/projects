@@ -1,4 +1,5 @@
 {% extends 'todo_app/base.html' %}
+{% load static %}
 
 
 {% block title %}
@@ -9,17 +10,17 @@
 
 {% block content %}
     <H1>Todo Detials</H1>
-    <h3>Title</h3>
+    <h3>Title :</h3>
         {{todo}}
-    <h3>Decription</h3>
+    <h3>Decription :</h3>
         {{todo.description}}
-    <h3>Priority</h3>
+    <h3>Priority :</h3>
         {{todo.priority}}
-    <h3>Complete</h3>
+    <h3>Complete :</h3>
         {{todo.complete}}
-    <h3>Created</h3>
+    <h3>Created :</h3>
         {{todo.created|date:'D M y H:i'}}
-    <h3>Last updated</h3>
+    <h3>Last updated :</h3>
     {{todo.updated|date:'D M y H:i'}}
     <br>
     <a href="{% url 'index' %}">Back</a>

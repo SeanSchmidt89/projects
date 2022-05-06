@@ -2,6 +2,7 @@
 {% load static %}
 
 
+
 {% block title %}
     Home Page
 {% endblock title %}
@@ -13,7 +14,7 @@
 
     <a href="{% url 'create' %}">Create Todo</a>
 
-    <h3>Non Completed Tasks</h3>
+    <h3>Non Completed Tasks :</h3>
     <ul>
     {% for todo in todos %}
         {% if todo.complete == False %}
@@ -27,7 +28,7 @@
     {% endfor %}
     </ul>
 
-    <h3>Completed Tasks</h3>
+    <h3>Completed Tasks :</h3>
     <ul>
     {% for todo in todos %}
         {% if todo.complete == True %}
